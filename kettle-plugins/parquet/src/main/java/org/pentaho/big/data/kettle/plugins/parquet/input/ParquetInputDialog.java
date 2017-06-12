@@ -247,13 +247,13 @@ public class ParquetInputDialog extends BaseFileInputDialog<ParquetInputMeta> {
         ConstUI.ICON_SIZE );
   }
 
-  private void cancel() {
+  protected void cancel() {
     stepname = null;
     input.setChanged( changed );
     dispose();
   }
 
-  private void ok() {
+  protected void ok() {
     if ( Utils.isEmpty( wStepname.getText() ) ) {
       return;
     }
